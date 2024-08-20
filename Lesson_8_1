@@ -1,0 +1,39 @@
+/* Создайте класс Person с двумя полями: name (строка) и age (целое число). Добавьте конструктор, который принимает 
+эти два параметра и инициализирует соответствующие поля. В методе main создайте объект класса Person с именем “Алиса” 
+и возрастом 30, а затем выведите эти значения на экран. Потом сделайте мужа Алисы и 5 детей (имена придумайте сами) */
+public class Lesson_8_1{
+    public static void main(String[] args) {
+
+        Person women = new Person("Alisa", 30);
+        women.displayinfo();
+        Person men = new Person ("Nikolay", 35);
+        men.displayinfo();
+        Person children1 = new Person ("Masha", 5);
+        children1.displayinfo();
+        Person children2 = new Person ("Dasha", 7);
+        children2.displayinfo();
+        Person children3 = new Person ("Sasha", 10);
+        children3.displayinfo();
+        Person children4 = new Person ("Glasha", 12);
+        children4.displayinfo();
+        Person children5 = new Person ("Kasha", 15);
+        children5.displayinfo();
+
+        System.out.println();
+    }
+}
+class Person{
+        public String name;
+        public int age;
+
+        public Person(String name) {      //Первый конструктор, с нулевыми параметрами
+        this(name, 0);
+        }
+        public Person(String name, int age) {      //Второй конструктор
+            this.age = age;
+            this.name = name;
+        }
+        void displayinfo (){                       // Метод
+            System.out.printf("Name:  %s \t Age: %d \n", name, age);
+        }
+}
